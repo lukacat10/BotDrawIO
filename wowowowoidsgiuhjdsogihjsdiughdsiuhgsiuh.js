@@ -52,7 +52,7 @@ function runme(App) {
 		let itemEl = possibleItems[0];
 		let itemElRect = itemEl.getBoundingClientRect();
 
-		return itemElRect.left === parseFloat(lastPopup.a) && itemElRect.bottom === parseFloat(lastPopup.b)
+		return itemElRect.left === parseFloat(lastPopup.a) &&  Math.abs(Math.floor(itemElRect.bottom) - parseFloat(lastPopup.b)) < 10
 	}
 
 	function IsStart(cell) {
